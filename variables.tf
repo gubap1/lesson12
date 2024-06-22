@@ -1,4 +1,17 @@
-
+variable "aws_region" {
+  description = "AWS region"
+  type = string
+  default = "eu-central-1"
+}
+variable "aws_backend_bucket" {
+  description = "AWS S3 bucket used to store state file"
+  type = string
+}
+variable "aws_backend_file" {
+  description = "Filepath in aws_backend_bucket for state file"
+  type = string
+  default = "terraformStates/lesson12/terraform.tfstate"
+}
 variable "aws_access_key" {
   description = "AWS access key of user for creating AWS objects"
   type = string
