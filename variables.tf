@@ -15,10 +15,12 @@ variable "aws_backend_file" {
 variable "aws_access_key" {
   description = "AWS access key of user for creating AWS objects"
   type        = string
+  sensitive   = true
 }
 variable "aws_secret_key" {
   description = "AWS secret key to aws_access_key"
   type        = string
+  sensitive   = true
 }
 variable "aws_ssh_key_name" {
   description = "AWS secret key to aws_access_key"

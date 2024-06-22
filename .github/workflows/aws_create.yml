@@ -11,6 +11,10 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   # S3 bucket for the Terraform state
   BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
+  # Set values for credential variables defined in terraform
+  TV_VAR_aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  TV_VAR_aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  TF_VAR_aws_backend_bucket: ${{ secrets.BUCKET_TF_STATE }}
 
 jobs:
   build:
