@@ -5,7 +5,7 @@ terraform {
 }
 
 provider "aws" {
-  region = var.aws_region
+  region     = var.aws_region
   access_key = var.aws_access_key
   secret_key = var.aws_secret_key
 }
@@ -34,12 +34,12 @@ resource "aws_s3_bucket_acl" "lesson12_s3_acl" {
 }
 
 resource "aws_instance" "lesson12_ec2" {
-  ami               = "ami-00cf59bc9978eb266" # Amazon Linux 2023 AMI (64-bit (x96), uefi)
-  instance_type     = "t2.micro"
-  key_name          = var.aws_ssh_key_name
+  ami           = "ami-00cf59bc9978eb266" # Amazon Linux 2023 AMI (64-bit (x96), uefi)
+  instance_type = "t2.micro"
+  key_name      = var.aws_ssh_key_name
 
   tags = {
-    Name = "lesson12_ec2"
+    Name        = "lesson12_ec2"
     Environment = "Learning"
   }
 }
